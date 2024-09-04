@@ -70,7 +70,7 @@ print("* Creating directory 'version'")
 writedir = os.path.dirname(sys.argv[1])
 os.makedirs(os.path.join(writedir, "version"), exist_ok=True)
 print("* Getting releases")
-resp = requests.get("https://51.159.194.214/en/mcpe/?__cpo=aHR0cHM6Ly9tb2RzY3JhZnQubmV0", headers={"User-Agent": user_agent})
+resp = requests.get("https://modscraft.net/en/mcpe/", headers={"User-Agent": user_agent})
 if not resp.ok:
     print(f"! ModsCraft returned {resp.status_code}")
     sys.exit(1)
